@@ -2,7 +2,7 @@
 Contributors: marcqueralt
 Tags: acommodation, multisite, availability
 Requires at least: 3.7
-Tested up to: 3.7.1
+Tested up to: 3.8.2
 Stable tag: head
 
 == Description ==
@@ -27,9 +27,11 @@ This plugin can be installed as any other WordPress plugin.
 TBD
 
 == Changelog ==
-
-= 1.0 =
-* Initial version translation ready
+= 1.2 =
+* SEO slug for accommodation type defined
 
 = 1.1 = 
 * Bug on other accommodations widget links
+
+= 1.0 =
+* Initial version translation ready

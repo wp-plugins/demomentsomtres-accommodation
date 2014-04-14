@@ -41,8 +41,8 @@ function demomentsomtres_accommodation_option_page() {
  */
 function demomentsomtres_accommodation_admin_init() {
     register_setting('dmst_accommodation_options', DMST_ACCOMMODATION_OPTIONS, 'demomentsomtres_accommodation_validate_options');
+    add_settings_section('dmst_accomodation_seo', __('SEO', DMST_ACCOMMODATION_TEXT_DOMAIN), 'demomentsomtres_accommodation_section_seo', 'dmst_accommodation');
     add_settings_section('dmst_accommodation_services', __('Services', DMST_ACCOMMODATION_TEXT_DOMAIN), 'demomentsomtres_accommodation_section_services', 'dmst_accommodation');
-//    demomentsomtres_accommodation_services();
 }
 
 /**
@@ -173,4 +173,22 @@ function demomentsomtres_accommodation_service_pos_field($service) {
  */
 function demomentsomtres_accommodation_service_hint_field($service) {
     dmst_admin_helper_input(null, DMST_ACCOMMODATION_OPTIONS . "[services][id$service[id]]", $service['hint']);
+}
+
+/**
+ * @since 1.2
+ */
+function demomentsomtres_accommodation_section_seo() {
+    echo '<p>' . __("Set the SEO configuration for this content type", DMST_ACCOMMODATION_TEXT_DOMAIN) . '</p>';
+    $value=  demomentsomtres_accommodation_get_slug_item();
+    echo '<table class="form-table">';
+    echo '<tbody>';
+    echo '<tr valign="top">';
+    echo '<th scope="row">'. __('Slug for accommodation item', DMST_PORTFOLIO_TEXT_DOMAIN).'</th>';
+    echo '<td>';
+    dmst_admin_helper_input(DMST_ACCOMMODATION_OPTIONS,'slug_item', $value);
+    echo '</td>';
+    echo '</tr>';
+    echo '</tbody>';
+    echo '</table>';
 }
