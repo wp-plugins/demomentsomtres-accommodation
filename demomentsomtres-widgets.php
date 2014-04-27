@@ -3,7 +3,7 @@
 class OtherAccommodationsWidget extends WP_Widget {
 
     function OtherAccommodationsWidget() {
-        parent::WP_Widget(false, $name = __('Other Accommodations', DMST_ACCOMMODATION_TEXT_DOMAIN));
+        parent::WP_Widget(false, $name = __('Accommodation: other', DMST_ACCOMMODATION_TEXT_DOMAIN));
     }
 
     function form($instance) {
@@ -101,7 +101,7 @@ class OtherAccommodationsWidget extends WP_Widget {
 class AccommodationServicesWidget extends WP_Widget {
 
     function AccommodationServicesWidget() {
-        parent::WP_Widget(false, $name = __('This Accommodation Services', DMST_ACCOMMODATION_TEXT_DOMAIN));
+        parent::WP_Widget(false, $name = __('Accommodation Services', DMST_ACCOMMODATION_TEXT_DOMAIN));
     }
 
     function form($instance) {

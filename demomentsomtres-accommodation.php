@@ -4,7 +4,7 @@
   Plugin Name: DeMomentSomTres Accommodation
   Plugin URI: http://demomentsomtres.com/english/wordpress-plugins/demomentsomtres-accommodation/
   Description: Accommodation management
-  Version: 1.2
+  Version: 1.2.1
   Author: Marc Queralt
   Author URI: http://demomentsomtres.com
  */
