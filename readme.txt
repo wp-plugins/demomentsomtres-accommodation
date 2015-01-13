@@ -2,7 +2,7 @@
 Contributors: marcqueralt
 Tags: acommodation, multisite, availability
 Requires at least: 3.7
-Tested up to: 3.9
+Tested up to: 4.1
 Stable tag: head
 
 == Description ==
@@ -27,6 +27,10 @@ This plugin can be installed as any other WordPress plugin.
 TBD
 
 == Changelog ==
+= 1.2.2 =
+* Other Accommodations widget bug solved: The widget failed to shown when no accommodation type selected for the accommodation being shown.
+* 4.1 compatibility checked
+
 = 1.2.1 = 
 * Widget names changed to group them
 * 3.9 compatibility checked

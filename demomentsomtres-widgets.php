@@ -41,12 +41,12 @@ class OtherAccommodationsWidget extends WP_Widget {
         extract($args);
         global $post;
         $taxs = wp_get_post_terms($post->ID, 'accommodation-type');
+        echo $before_widget;
+        $title = apply_filters('widget_title', $instance['title']);
+        if ($title)
+            echo $before_title . $title . $after_title;
         if (is_array($taxs)):
             if (isset($taxs[0])):
-                echo $before_widget;
-                $title = apply_filters('widget_title', $instance['title']);
-                if ($title)
-                    echo $before_title . $title . $after_title;
                 $tax = $taxs[0]->term_id;
                 $queryArgs = array(
                     'post_type' => 'accommodation-item',
@@ -91,9 +91,9 @@ class OtherAccommodationsWidget extends WP_Widget {
                         echo '</a>';
                     endif;
                 endforeach;
-                echo $after_widget;
             endif;
         endif;
+        echo $after_widget;
     }
 
 }
